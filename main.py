@@ -1,8 +1,8 @@
 import os
 
-from model.player import Player
-from view.view import View
-from presenter.presenter import Presenter
+from model.Player import Player
+
+from presenter.Presenter import Presenter
 from os import system
 
 

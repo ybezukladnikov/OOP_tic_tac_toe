@@ -1,5 +1,25 @@
+from accessify import private
 class Data_Base:
-    dictionary = {'1': '1', '2': '2', '3': '3',
-                  '4': '4', '5': '5', '6': '6',
-                  '7': '7', '8': '8', '9': '9'}
+
+    # def __init__(self, dictionary):
+    #     self.__dictionary = dictionary
+
+    @private
+    @classmethod
+    def check_value(cls, dictionary):
+        return type(dictionary) is dict
+
+    def set_dict(self, dictionary):
+        if self.check_value(dictionary):
+            self.__dictionary = dictionary
+        else:
+            raise ValueError("Wrong type")
+
+
+
+    def get_dict(self):
+        return self.__dictionary
+
+
+
 
