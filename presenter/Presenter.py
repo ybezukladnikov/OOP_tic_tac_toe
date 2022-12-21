@@ -1,6 +1,7 @@
 from model.Check import Check
 from model.Player import Player
-from view.Input import Input
+from view.Input_GUI import Input_GUI
+from view.Input_console import Input
 from view.Output import Output
 from model.Data_Base import Data_Base
 
@@ -9,7 +10,8 @@ class Presenter:
 
     dictionary = Data_Base()
     my_output = Output()
-    my_input = Input()
+    # my_input = Input()
+    my_input = Input_GUI()
     my_check = Check()
 
 

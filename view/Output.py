@@ -46,7 +46,7 @@ class Output:
     def print_name(self, name_player):
         print(name_player)
 
-    def print_name_win(self,name_player):
+    def print_name_win(self, name_player):
         print(f"Congratulate! {name_player} win.")
 
     def print_draw(self):
