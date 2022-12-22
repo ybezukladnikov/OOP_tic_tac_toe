@@ -1,5 +1,5 @@
 from view.Abstract_Input import Abstract_Input
-from tkinter import *
+import tkinter as tk
 
 
 class Input_GUI(Abstract_Input):
@@ -10,25 +10,22 @@ class Input_GUI(Abstract_Input):
     def get_step(self, name):
         return input(f"{name} enter the cell number => ")
 
-
-
     def get_name(self, order):
-
-
 
         def clicked():
             self.res = txt.get()
-            lbl.configure(text="Добро пожаловать в приложение PythonRu")
+            window.destroy()
+            # lbl.configure(text="Добро пожаловать в приложение PythonRu")
 
-        window = Tk()
+        window = tk.Tk()
         window.title("Добро пожаловать в приложение PythonRu")
         window.geometry('400x250')
-        lbl = Label(window, text=f"Input name {order} player =>")
+        lbl = tk.Label(text=f"Input name {order} player =>")
         lbl.grid(column=0, row=0)
-        txt = Entry(window, width=10)
+        txt = tk.Entry(width=10)
         txt.grid(column=1, row=0)
 
-        btn = Button(window, text="Submit", command=clicked)
+        btn = tk.Button(text="Submit", command=clicked)
         btn.grid(column=2, row=0)
         window.mainloop()
 
