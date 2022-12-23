@@ -10,8 +10,8 @@ class Presenter:
 
     dictionary = Data_Base()
     my_output = Output()
-    # my_input = Input()
-    my_input = Input_GUI()
+    my_input = Input()
+    # my_input = Input_GUI()
     my_check = Check()
 
 
